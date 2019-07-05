@@ -1,0 +1,33 @@
+@import '../../common/styles/variables.scss';
+
+.header {
+  padding: 9px 0;
+  margin: 0 17px;
+  width: calc(100% - 34px);
+  background-color: $WHITE_COLOR;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid $SECONDARY_COLOR;
+
+  .widget-button {
+    margin: 0px 6px;
+
+    &:last-child {
+      margin-right: 0
+    }
+  }
+
+  .menu {
+    margin-right: auto;
+
+    .menu-item {
+      margin: 0 17px ;
+      font-family: Helvetica;
+      font-size: 1.4rem;
+      color: $FOOTER_TEXT_COLOR;
+    }
+  }
+}

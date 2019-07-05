@@ -1,0 +1,61 @@
+@import '../../../common/styles/variables.scss';
+.widget {
+  border: 1px solid $SECONDARY_COLOR;
+  max-width: 380px;
+
+  .widget-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+
+    .widget-title {
+      width: calc(100% - 100px);
+      padding: 14px 17px;
+      p {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin: 0;
+        color: #ff952d;
+      }
+    }
+  }
+  .widget-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 46px;
+    background: $THIRD_COLOR;
+    .footer-text {
+      padding: 16px 14px;
+      a {
+        font-size: 1.4rem;
+        color: $FOOTER_TEXT_COLOR;
+      }
+    }
+
+    .widget-button {
+      background-color: $FOOTER_BUTTON_COLOR;
+    }
+  }
+  .widget-body {
+    max-height: 0;
+    padding: 0 1em;
+    background: white;
+    transition: all 0.35s;
+    > * {
+      display: none;
+    }
+  }
+  &.active {
+    .widget-body {
+      display: flex;
+      max-height: 500px;
+      padding: 17px;
+      cursor: pointer;
+      > * {
+        display: flex;
+      }
+    }
+  }
+}
