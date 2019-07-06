@@ -14,27 +14,14 @@ export interface WidgetProps {
   footerText: string;
   children: any;
 }
-export interface WidgetState {
-  active: boolean;
-}
-const initState = {
-  active: true
-};
+
 export default function Widget(props: WidgetProps) {
-  const [state, setstate] = useState(initState);
+  const [active, setActtive] = useState<boolean>(true);
   const {title, footerText, children} = props;
-  const {active} = state;
   const widgetClassName = classNames('widget', {active: active});
-
   useEffect(() => {
-    if (props && props.active !== undefined) setstate({active: props.active});
-  }, [props]);
-
-  const handleCloseWidget = () => {
-    setstate((prevState) => {
-      return {active: !prevState.active};
-    });
-  };
+    if (props && props.active !== undefined) setActtive(props.active);
+  }, [props, props.active]);
   return (
     <div className={widgetClassName}>
       <div className="widget-header">
@@ -44,7 +31,7 @@ export default function Widget(props: WidgetProps) {
         <div className="widget-title">
           <p>{title}</p>
         </div>
-        <div className="widget-button" onClick={handleCloseWidget}>
+        <div className="widget-button" onClick={() => setActtive(!active)}>
           <img src={cancelIcon} alt="close" />
         </div>
       </div>

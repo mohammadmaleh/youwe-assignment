@@ -8,24 +8,49 @@ interface AppProps {
   thunkFetchDashboardData: any;
   dashboardData: DashboardState;
 }
-
 class App extends React.Component<AppProps> {
-  public state = {
-    message: ''
-  };
-
   public componentDidMount() {
     const {thunkFetchDashboardData} = this.props;
     thunkFetchDashboardData();
   }
-
   public render() {
     return (
-      <div className="parent">
+      <div className="dashboard">
         <Header />
-        <Widget icon="" title={'Evenementen'} footerText={'dsdsds'}>
-          <p>dsadsaddsa</p>
-        </Widget>
+        <div className="wrapper">
+          <Widget
+            icon=""
+            title={'Evenementen'}
+            footerText={'dsdsds'}
+            active={false}
+          >
+            <p>dsadsaddsa</p>
+          </Widget>
+          <Widget
+            icon=""
+            title={'Evenementen'}
+            footerText={'dsdsds'}
+            active={false}
+          >
+            <p>dsadsaddsa</p>
+          </Widget>
+          <Widget
+            icon=""
+            title={'Evenementen'}
+            footerText={'dsdsds'}
+            active={false}
+          >
+            <p>dsadsaddsa</p>
+          </Widget>
+          <Widget
+            icon=""
+            title={'Evenementen'}
+            footerText={'dsdsds'}
+            active={false}
+          >
+            <p>dsadsaddsa</p>
+          </Widget>
+        </div>
       </div>
     );
   }
