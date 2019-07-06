@@ -1,0 +1,60 @@
+@import '../../common/styles/variables.scss';
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: scroll;
+  max-height: 175px;
+  margin-bottom: 5px;
+  .accordion-header {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    background-color: $INACTIVE_COLOR;
+    transition: all 0.35s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    .title-container {
+      padding-left: 17px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .title {
+        font-size: 18px;
+        color: #ff952d;
+      }
+    }
+  }
+  .accordion-body {
+    max-height: 0;
+    padding: 0 1em;
+    background: white;
+    transition: all 0.35s ease-in-out;
+
+    > * {
+      display: none;
+    }
+  }
+  &.active {
+    .accordion-header {
+      background-color: $LIGHT_GREY_COLOR;
+      .clickable-icon.clickable img {
+        transform: rotate(20deg);
+        transition: all 0.35s ease-in-out;
+      }
+    }
+    .accordion-body {
+      display: flex;
+      max-height: 500px;
+      padding: 17px;
+      cursor: pointer;
+      > * {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {WidgetProps} from './Widget';
-
+import {ClickableIcon} from '../../index';
 import cancelIcon from '../../../assets/images/cancel.svg';
 import eventsIcon from '../../../assets/images/calendar.png';
 import openIcon from '../../../assets/images/open.png';
@@ -16,24 +16,25 @@ export interface WidgetProps {
 }
 
 export default function Widget(props: WidgetProps) {
-  const [active, setActtive] = useState<boolean>(true);
+  const [active, setActive] = useState<boolean>(true);
   const {title, footerText, children} = props;
   const widgetClassName = classNames('widget', {active: active});
   useEffect(() => {
-    if (props && props.active !== undefined) setActtive(props.active);
+    if (props && props.active !== undefined) setActive(props.active);
   }, [props, props.active]);
   return (
     <div className={widgetClassName}>
       <div className="widget-header">
-        <div className="widget-button">
-          <img src={eventsIcon} alt="" />
-        </div>
+        <ClickableIcon icon={eventsIcon} />
+
         <div className="widget-title">
           <p>{title}</p>
         </div>
-        <div className="widget-button" onClick={() => setActtive(!active)}>
-          <img src={cancelIcon} alt="close" />
-        </div>
+
+        <ClickableIcon
+          icon={cancelIcon}
+          handleClick={() => setActive(!active)}
+        />
       </div>
 
       <div className="widget-body">{children}</div>
@@ -41,9 +42,7 @@ export default function Widget(props: WidgetProps) {
         <div className="footer-text">
           <p>{footerText}</p>
         </div>
-        <div className="widget-button">
-          <img src={openIcon} alt="" />
-        </div>
+        <ClickableIcon icon={openIcon} />
       </div>
     </div>
   );

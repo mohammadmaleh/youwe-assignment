@@ -1,7 +1,7 @@
 import * as React from 'react';
-import './Header.scss';
 import cancelIcon from '../../assets/images/cancel.svg';
-import Logo from '../../assets/images/CuraNu-Logo.png';
+import Logo from '../../assets/images/CuraNu-logo.png';
+import {ClickableIcon} from '../index';
 interface IHeaderProps {}
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
@@ -25,15 +25,46 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
             FAQ
           </a>
         </div>
-        <div className="widget-button">
-          <img src={cancelIcon} alt="" />
-        </div>
-        <div className="widget-button">
-          <img src={cancelIcon} alt="" />
-        </div>
+        <ClickableIcon icon={cancelIcon} />
+        <ClickableIcon icon={cancelIcon} />
       </div>
+
       <div className="logo-container">
         <img src={Logo} alt="" />
+        <div className="title-container">
+          <h1 className="title">CuraNu</h1>
+          <p className="secondry-title">Zorg en welzij</p>
+        </div>
+        <h2 className="motto">Intranet</h2>
+      </div>
+      <div className="navigation">
+        <ul className="navigation-container">
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+          <li className="navigation-item">
+            <a href="/">FAQ</a>
+          </li>
+        </ul>
+        <div className="search-container">
+          <input type="text" className="search-input" />
+          <ClickableIcon icon={cancelIcon} handleClick={() => {}} />
+        </div>
       </div>
     </div>
   );

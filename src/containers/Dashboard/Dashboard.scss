@@ -1,0 +1,9 @@
+.dashboard {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-auto-rows: auto-fit;
+    margin: 0 auto;
+    grid-gap: 20px;
+  }
+}

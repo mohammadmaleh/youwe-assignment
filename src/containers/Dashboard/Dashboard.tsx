@@ -3,11 +3,12 @@ import {connect} from 'react-redux';
 import {AppState} from '../../redux';
 import {thunkFetchDashboardData} from '../../redux/dashboard/dashboard.thunks';
 import {DashboardState} from '../../redux/dashboard/dashboard.types';
-import {Widget, Header} from '../../components';
+import {Widget, Header, Accordions} from '../../components';
 interface AppProps {
   thunkFetchDashboardData: any;
   dashboardData: DashboardState;
 }
+
 class App extends React.Component<AppProps> {
   public componentDidMount() {
     const {thunkFetchDashboardData} = this.props;
@@ -18,6 +19,7 @@ class App extends React.Component<AppProps> {
       <div className="dashboard">
         <Header />
         <div className="wrapper">
+          <Accordions />
           <Widget
             icon=""
             title={'Evenementen'}
@@ -48,7 +50,7 @@ class App extends React.Component<AppProps> {
             footerText={'dsdsds'}
             active={false}
           >
-            <p>dsadsaddsa</p>
+            pssdasd
           </Widget>
         </div>
       </div>

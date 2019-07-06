@@ -1,13 +1,14 @@
 @import '../../common/styles/variables.scss';
-
 .header {
   display: flex;
   flex-direction: column;
-  padding: 9px 0;
-  margin: 0 17px;
-
+  align-items: flex-start;
+  justify-content: flex-end;
+  > * {
+    padding: 0 90px;
+    width: calc(100% - 180px);
+  }
   .menu-container {
-    width: calc(100% - 34px);
     background-color: $WHITE_COLOR;
     height: 60px;
     display: flex;
@@ -15,12 +16,11 @@
     align-items: center;
     justify-content: flex-end;
     border-bottom: 1px solid $SECONDARY_COLOR;
-
-    .widget-button {
+    .clickable-icon {
       margin: 0px 6px;
 
       &:last-child {
-        margin-right: 0
+        margin-right: 0;
       }
     }
 
@@ -35,5 +35,69 @@
       }
     }
   }
-
+  .logo-container {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      height: 64px;
+      margin-right: 5px;
+    }
+    .title-container {
+      margin-right: 32px;
+      .title {
+        font-family: Helvetica;
+        font-size: 24px;
+        color: #000000;
+      }
+      .secondry-title {
+        font-size: 15px;
+        color: #000000;
+      }
+    }
+    .motto {
+      padding-top: 25px;
+      font-size: 24px;
+      color: #000000;
+    }
+  }
+  .navigation {
+    height: 86px;
+    background-color: $PURPLE_COLOR;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .navigation-container {
+      display: flex;
+      flex-direction: row;
+      .navigation-item {
+        list-style-type: none;
+        margin-right: 25px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          font-size: 16px;
+          color: #ffffff;
+        }
+      }
+    }
+    .search-container {
+      display: flex;
+      flex-direction: row;
+      .search-input {
+        width: calc(100% -50px);
+        width: 380px;
+        height: 46px;
+        background-color: $WHITE_COLOR;
+        font-family: Helvetica;
+        font-size: 16px;
+        color: $FOOTER_TEXT_COLOR;
+        padding-left: 5px;
+      }
+    }
+  }
 }
