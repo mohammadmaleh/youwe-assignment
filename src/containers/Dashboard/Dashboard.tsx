@@ -2,8 +2,8 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {AppState} from '../../redux';
 import {thunkFetchDashboardData} from '../../redux/dashboard/dashboard.thunks';
-import {DashboardState} from '../../redux/dashboard/dashboard.types';
-import {Widget, Header, Accordions} from '../../components';
+import {DashboardState} from '../../types/dashboard.types';
+import {Events, Header, Accordions} from '../../components';
 interface AppProps {
   thunkFetchDashboardData: any;
   dashboardData: DashboardState;
@@ -14,44 +14,16 @@ class App extends React.Component<AppProps> {
     const {thunkFetchDashboardData} = this.props;
     thunkFetchDashboardData();
   }
+
   public render() {
+    const {events} = this.props.dashboardData;
+
     return (
       <div className="dashboard">
         <Header />
         <div className="wrapper">
           <Accordions />
-          <Widget
-            icon=""
-            title={'Evenementen'}
-            footerText={'dsdsds'}
-            active={false}
-          >
-            <p>dsadsaddsa</p>
-          </Widget>
-          <Widget
-            icon=""
-            title={'Evenementen'}
-            footerText={'dsdsds'}
-            active={false}
-          >
-            <p>dsadsaddsa</p>
-          </Widget>
-          <Widget
-            icon=""
-            title={'Evenementen'}
-            footerText={'dsdsds'}
-            active={false}
-          >
-            <p>dsadsaddsa</p>
-          </Widget>
-          <Widget
-            icon=""
-            title={'Evenementen'}
-            footerText={'dsdsds'}
-            active={false}
-          >
-            pssdasd
-          </Widget>
+          <Events events={events} />
         </div>
       </div>
     );

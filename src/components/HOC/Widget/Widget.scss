@@ -42,7 +42,7 @@
     padding: 0 1em;
     background: white;
     transition: all 0.35s;
-    > * {
+    & > div {
       display: none;
     }
   }
@@ -52,7 +52,7 @@
       max-height: 500px;
       padding: 17px;
       cursor: pointer;
-      > * {
+      & > div {
         display: flex;
       }
     }
