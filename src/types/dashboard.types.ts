@@ -6,6 +6,7 @@ export interface SystemState {
 }
 
 export interface EventType {
+  id: string;
   name: string;
   date: string;
 }
@@ -42,7 +43,7 @@ export interface MicroBloggerType {
   blogImage: any;
 }
 export interface DashboardState {
-  events: EventType[];
+  events: EventType[] | null;
   blogs: BlogType[];
   news: NewSType[];
   qualityManual: QualityManualType[];

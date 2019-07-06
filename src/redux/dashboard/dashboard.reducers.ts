@@ -5,7 +5,7 @@ import {
 } from '../../types/dashboard.types';
 
 const initialState: DashboardState = {
-  events: [],
+  events: null,
   blogs: [],
   news: [],
   qualityManual: [],

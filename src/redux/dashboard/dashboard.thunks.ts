@@ -1,11 +1,11 @@
-import {DashboardState} from './../../types/dashboard.types';
 import {Action} from 'redux';
 import {ThunkAction} from 'redux-thunk';
 import {updateDashboard} from './dashboard.actions';
 import {AppState} from '../index';
-import {dashboarData} from '../../constats';
+import {dashboardData} from '../../constats';
 
-const fetchDashboardDataAPI = () => Promise.resolve(dashboarData);
+const fetchDashboardDataAPI = () =>
+  new Promise((resolve: Function) => setTimeout(resolve(dashboardData), 3000));
 
 export const thunkSendMessage = (
   message: string
@@ -16,7 +16,10 @@ export const thunkFetchDashboardData = (): ThunkAction<
   null,
   Action<string>
 > => async (dispatch) => {
-  const asyncResp: DashboardState = await fetchDashboardDataAPI();
-
-  dispatch(updateDashboard(asyncResp));
+  try {
+    const asyncResp: unknown = await fetchDashboardDataAPI();
+    dispatch(updateDashboard(asyncResp));
+  } catch (err) {
+    console.log('Error: ', err.message);
+  }
 };

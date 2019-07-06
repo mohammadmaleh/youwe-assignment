@@ -1,4 +1,4 @@
-// import { format } from 'date-fns';
+import {format} from 'date-fns';
 import blogUserImage from '../assets/images/Oval 2 2.png';
 import news1 from '../assets/images/news-1.png';
 import news2 from '../assets/images/news-2.png';
@@ -6,10 +6,16 @@ import news3 from '../assets/images/news-3.png';
 import group2 from '../assets/images/group-2.png';
 import group1 from '../assets/images/group-1.png';
 import blogPost from '../assets/images/blog-post.png';
-export const dashboarData = {
-  events: [{name: 'string', date: 'string'}],
+import uuid from 'uuid/v1';
+export const dashboardData = {
+  events: [
+    {id: uuid(), name: 'string', date: format('10/12/1988')},
+    {id: uuid(), name: 'string', date: format('10/12/1988')},
+    {id: uuid(), name: 'string', date: format('10/12/1988')}
+  ],
   blogs: [
     {
+      id: uuid(),
       username: 'string',
       date: 'string',
       liked: false,
@@ -21,6 +27,7 @@ export const dashboarData = {
   ],
   news: [
     {
+      id: uuid(),
       date: 'string',
       title: 'string',
       liked: false,
@@ -28,6 +35,7 @@ export const dashboarData = {
       newsImage: news1
     },
     {
+      id: uuid(),
       date: 'string',
       title: 'string',
       liked: false,
@@ -35,6 +43,7 @@ export const dashboarData = {
       newsImage: news2
     },
     {
+      id: uuid(),
       date: 'string',
       title: 'string',
       liked: false,
@@ -42,21 +51,18 @@ export const dashboarData = {
       newsImage: news3
     }
   ],
-  qualityManual: [{title: 'string', date: 'string', city: 'string'}],
+  qualityManual: [
+    {id: uuid(), title: 'string', date: 'string', city: 'string'}
+  ],
   polls: [],
   userLinks: ['string'],
   userGroups: [
-    {
-      groupImage: group1,
-      name: 'string'
-    },
-    {
-      groupImage: group2,
-      name: 'string'
-    }
+    {id: uuid(), groupImage: group1, name: 'string'},
+    {id: uuid(), groupImage: group2, name: 'string'}
   ],
   microBlogs: [
     {
+      id: uuid(),
       authorImage: blogUserImage,
       authorName: 'string',
       numberOfResponses: 0,
