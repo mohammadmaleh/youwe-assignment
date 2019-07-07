@@ -25,6 +25,7 @@ export interface NewSType {
   liked: boolean;
   likesCount: number;
   newsImage: any;
+  id: string;
 }
 export interface QualityManualType {
   title: string;

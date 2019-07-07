@@ -1,0 +1,28 @@
+@import '../../common/styles/variables.scss';
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  .news-holder {
+    width: 100%;
+    .news-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      img {
+        height: 75px;
+        width: 75px;
+      }
+      .news-description {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        p {
+        }
+      }
+    }
+  }
+}

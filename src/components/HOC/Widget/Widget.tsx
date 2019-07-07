@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import {WidgetProps} from './Widget';
-import {ClickableIcon} from '../../index';
-import cancelIcon from '../../../assets/images/cancel.svg';
-import eventsIcon from '../../../assets/images/calendar.png';
-import openIcon from '../../../assets/images/open.png';
 import './Widget.scss';
+
+import React, { useEffect, useState } from 'react';
+
+import { ClickableIcon } from '../..';
+import eventsIcon from '../../../assets/images/calendar.png';
+import cancelIcon from '../../../assets/images/cancel.svg';
+import openIcon from '../../../assets/images/open.png';
+
 var classNames = require('classnames');
 
 export interface WidgetProps {
@@ -22,6 +24,8 @@ export default function Widget(props: WidgetProps) {
   useEffect(() => {
     if (props && props.active !== undefined) setActive(props.active);
   }, [props, props.active]);
+  console.log(children);
+
   return (
     <div className={widgetClassName}>
       <div className="widget-header">

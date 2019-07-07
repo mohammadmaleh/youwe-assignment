@@ -3,10 +3,6 @@
   width: 100%;
 
   .event {
-    padding: 17.5px 0;
-    border-bottom: 1px solid $LIGHT_GREY_COLOR;
-    width: 100%;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -14,8 +10,6 @@
 
     p {
       margin: 0 10px;
-      font-size: 14px;
-      color: $INACTIVE_COLOR;
     }
     &:last-child {
       border-bottom: none;

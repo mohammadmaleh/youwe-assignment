@@ -1,12 +1,14 @@
-import {format} from 'date-fns';
-import blogUserImage from '../assets/images/Oval 2 2.png';
+import { format } from 'date-fns';
+import uuid from 'uuid/v1';
+
+import blogPost from '../assets/images/blog-post.png';
+import group1 from '../assets/images/group-1.png';
+import group2 from '../assets/images/group-2.png';
 import news1 from '../assets/images/news-1.png';
 import news2 from '../assets/images/news-2.png';
 import news3 from '../assets/images/news-3.png';
-import group2 from '../assets/images/group-2.png';
-import group1 from '../assets/images/group-1.png';
-import blogPost from '../assets/images/blog-post.png';
-import uuid from 'uuid/v1';
+import blogUserImage from '../assets/images/Oval 2 2.png';
+
 export const dashboardData = {
   events: [
     {id: uuid(), name: 'string', date: format('10/12/1988')},

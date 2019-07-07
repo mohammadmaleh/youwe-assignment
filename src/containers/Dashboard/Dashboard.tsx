@@ -1,9 +1,11 @@
 import * as React from 'react';
-import {connect} from 'react-redux';
-import {AppState} from '../../redux';
-import {thunkFetchDashboardData} from '../../redux/dashboard/dashboard.thunks';
-import {DashboardState} from '../../types/dashboard.types';
-import {Events, Header, Accordions} from '../../components';
+import { connect } from 'react-redux';
+
+import { Accordions, Events, Header, News } from '../../components';
+import { AppState } from '../../redux';
+import { thunkFetchDashboardData } from '../../redux/dashboard/dashboard.thunks';
+import { DashboardState } from '../../types/dashboard.types';
+
 interface AppProps {
   thunkFetchDashboardData: any;
   dashboardData: DashboardState;
@@ -16,7 +18,7 @@ class App extends React.Component<AppProps> {
   }
 
   public render() {
-    const {events} = this.props.dashboardData;
+    const {events, news} = this.props.dashboardData;
 
     return (
       <div className="dashboard">
@@ -24,6 +26,7 @@ class App extends React.Component<AppProps> {
         <div className="wrapper">
           <Accordions />
           <Events events={events} />
+          <News news={news} />
         </div>
       </div>
     );
