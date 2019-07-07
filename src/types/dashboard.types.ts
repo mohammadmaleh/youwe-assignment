@@ -43,13 +43,16 @@ export interface MicroBloggerType {
   blogContent: string;
   blogImage: any;
 }
+export interface UserLinksType {
+  [index: number]: string[];
+}
 export interface DashboardState {
   events: EventType[] | null;
   blogs: BlogType[];
   news: NewSType[];
   qualityManual: QualityManualType[];
   polls: any[];
-  userLinks: any[];
+  userLinks: UserLinksType;
   userGroups: UserGroupType[];
   microBlogs: MicroBloggerType[];
 }
