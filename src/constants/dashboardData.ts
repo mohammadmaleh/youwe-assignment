@@ -62,7 +62,7 @@ export const dashboardData = {
     {id: uuid(), groupImage: group1, name: 'string'},
     {id: uuid(), groupImage: group2, name: 'string'}
   ],
-  microBlogs: [
+  microBlog: [
     {
       id: uuid(),
       authorImage: blogUserImage,

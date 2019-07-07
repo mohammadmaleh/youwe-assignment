@@ -18,6 +18,7 @@ export interface BlogType {
   commentsCount: number;
   blogContent: string;
   userImage: any;
+  id: string;
 }
 export interface NewSType {
   date: string;
@@ -36,25 +37,23 @@ export interface UserGroupType {
   groupImage: any;
   name: string;
 }
-export interface MicroBloggerType {
+export interface MicroBlogType {
   authorImage: string;
   authorName: string;
   numberOfResponses: number;
   blogContent: string;
   blogImage: any;
 }
-export interface UserLinksType {
-  [index: number]: string[];
-}
+
 export interface DashboardState {
   events: EventType[] | null;
   blogs: BlogType[];
   news: NewSType[];
   qualityManual: QualityManualType[];
   polls: any[];
-  userLinks: UserLinksType;
+  userLinks: string[];
   userGroups: UserGroupType[];
-  microBlogs: MicroBloggerType[];
+  microBlog: MicroBlogType[];
 }
 
 // Describing the different ACTION NAMES available

@@ -1,0 +1,13 @@
+.users-groups {
+  .user-groups-container {
+    width: 100%;
+  }
+  .user-group-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .group-text {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,8 +1,4 @@
-import {
-  DashboardState,
-  UPDATE_DASHBOARD,
-  DashboardActionTypes
-} from '../../types/dashboard.types';
+import { DashboardActionTypes, DashboardState, UPDATE_DASHBOARD } from '../../types/dashboard.types';
 
 const initialState: DashboardState = {
   events: null,
@@ -12,7 +8,7 @@ const initialState: DashboardState = {
   polls: [],
   userLinks: [],
   userGroups: [],
-  microBlogs: []
+  microBlog: []
 };
 
 export function dashboardReducer(

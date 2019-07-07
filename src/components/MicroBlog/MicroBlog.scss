@@ -1,0 +1,65 @@
+.micro-blog {
+  flex-direction: column;
+  .create-post {
+    display: flex;
+    flex-direction: column;
+    textarea {
+      width: 100%;
+      height: 180px;
+      resize: none;
+    }
+    .create-post-controls {
+      margin-top: 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .icons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 64px;
+      }
+      button {
+        background: #44b9f6;
+        width: 107px;
+        height: 32px;
+        font-size: 16px;
+        color: #ffffff;
+      }
+    }
+  }
+  .user-blogs-container {
+    width: 100%;
+    .user-blog-item {
+      display: flex;
+      flex-direction: column;
+      .blog-header {
+        display: flex;
+        flex-direction: row;
+        .author-info {
+          margin-left: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+        .likes-container {
+          margin-left: auto;
+          background-color: red;
+          width: 20px;
+        }
+      }
+      .blog-body {
+        display: flex;
+        flex-direction: column;
+        .blog-image {
+          height: 182px;
+          width: auto;
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

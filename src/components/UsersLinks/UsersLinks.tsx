@@ -1,16 +1,18 @@
 import * as React from 'react';
 
-import { Widget } from '../';
+import { ActivityIndicator, Widget } from '../';
 import cancelIcon from '../../assets/images/cancel.svg';
-import { UserLinksType } from '../../types/dashboard.types';
 
 interface UsersLinksProps {
-  userLinks: UserLinksType;
+  userLinks: string[] | null;
 }
 
 const UsersLinks: React.FunctionComponent<UsersLinksProps> = (props) => {
+  const {userLinks} = props;
+  if (!userLinks || userLinks === null) return <ActivityIndicator size="mid" />;
+
   const renderUsersLinks = () => {
-    const {userLinks} = props;
+    if (!userLinks) return false;
     return userLinks.map((link) => (
       <div className="user-link-item widget-item">
         <p className="user-link">{link}</p>
@@ -20,7 +22,7 @@ const UsersLinks: React.FunctionComponent<UsersLinksProps> = (props) => {
   return (
     <div className="users-links">
       <Widget footerText="dsdsad" title="Mijn links" icon={cancelIcon}>
-        <ul>{renderUsersLinks()}</ul>
+        <ul className="user-links-container">{renderUsersLinks()}</ul>
       </Widget>
     </div>
   );
