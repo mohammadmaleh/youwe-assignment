@@ -20,6 +20,11 @@ export interface BlogType {
   userImage: any;
   id: string;
 }
+export interface DirectLinksType {
+  title: string;
+  image: any;
+  id: string;
+}
 export interface NewSType {
   date: string;
   title: string;
@@ -46,6 +51,8 @@ export interface MicroBlogType {
 }
 
 export interface DashboardState {
+  openFirstAccordion: boolean;
+  clickingAccordionEffectOthers: boolean;
   events: EventType[] | null;
   blogs: BlogType[];
   news: NewSType[];
@@ -54,16 +61,11 @@ export interface DashboardState {
   userLinks: string[];
   userGroups: UserGroupType[];
   microBlog: MicroBlogType[];
+  DirectLinks: DirectLinksType[];
 }
 
-// Describing the different ACTION NAMES available
-export const UPDATE_SESSION = 'UPDATE_SESSION';
 export const UPDATE_DASHBOARD = 'UPDATE_DASHBOARD';
 
-interface UpdateSessionAction {
-  type: typeof UPDATE_SESSION;
-  payload: SystemState;
-}
 interface UpdateDashboardAction {
   type: typeof UPDATE_DASHBOARD;
   payload: DashboardState;
@@ -73,5 +75,4 @@ interface UpdateDashboardAction {
 //     payload: DashboardState;
 // }
 
-export type SystemActionTypes = UpdateSessionAction;
 export type DashboardActionTypes = UpdateDashboardAction;

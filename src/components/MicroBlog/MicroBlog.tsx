@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { ActivityIndicator, Widget } from '..';
 import cancelIcon from '../../assets/images/cancel.svg';
+import uploadIcon from '../../assets/images/upload-icons.svg';
 import { MicroBlogType } from '../../types/dashboard.types';
 
 interface MicroBlogProps {
@@ -33,21 +34,20 @@ const MicroBlog: React.FunctionComponent<MicroBlogProps> = (props) => {
     ));
   };
   return (
-    <div className="micro-blog">
-      <Widget footerText="dsdsad" title="micro blog" icon={cancelIcon}>
+    <Widget footerText="dsdsad" title="micro blog" icon={cancelIcon}>
+      <div className="micro-blog">
         <div className="create-post">
           <textarea name="" id="" />
           <div className="create-post-controls">
             <div className="icons-container">
-              <img src={cancelIcon} />
-              <img src={cancelIcon} />
+              <img src={uploadIcon} />
             </div>
             <button className="submit-button">Plaats</button>
           </div>
         </div>
         <ul className="user-blogs-container">{renderBlogs()}</ul>
-      </Widget>
-    </div>
+      </div>
+    </Widget>
   );
 };
 

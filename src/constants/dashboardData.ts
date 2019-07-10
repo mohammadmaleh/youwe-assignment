@@ -1,15 +1,21 @@
-import { format } from 'date-fns';
+import {format} from 'date-fns';
 import uuid from 'uuid/v1';
 
-import blogPost from '../assets/images/blog-post.png';
+import blogPost from '../assets/images/blog-photo.svg';
+import CuraNu from '../assets/images/CuraNu-logo.svg';
 import group1 from '../assets/images/group-1.png';
 import group2 from '../assets/images/group-2.png';
 import news1 from '../assets/images/news-1.png';
 import news2 from '../assets/images/news-2.png';
 import news3 from '../assets/images/news-3.png';
-import blogUserImage from '../assets/images/Oval 2 2.png';
+import Topdesk from '../assets/images/Topdesk-logo.svg';
+import user1 from '../assets/images/user-1.svg';
+import user2 from '../assets/images/user-2.svg';
+import youForce from '../assets/images/youForce-logo.svg';
 
 export const dashboardData = {
+  openFirstAccordion: false,
+  clickingAccordionEffectOthers: true,
   events: [
     {id: uuid(), name: 'string', date: format('10/12/1988')},
     {id: uuid(), name: 'string', date: format('10/12/1988')},
@@ -24,7 +30,7 @@ export const dashboardData = {
       likesCount: 0,
       commentsCount: 0,
       blogContent: 'string',
-      userImage: blogUserImage
+      userImage: user1
     }
   ],
   news: [
@@ -65,11 +71,16 @@ export const dashboardData = {
   microBlog: [
     {
       id: uuid(),
-      authorImage: blogUserImage,
+      authorImage: user2,
       authorName: 'string',
       numberOfResponses: 0,
       blogContent: 'string',
       blogImage: blogPost
     }
+  ],
+  DirectLinks: [
+    {id: uuid(), title: 'string', image: CuraNu},
+    {id: uuid(), title: 'string', image: Topdesk},
+    {id: uuid(), title: 'string', image: youForce}
   ]
 };

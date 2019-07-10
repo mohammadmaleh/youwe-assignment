@@ -20,11 +20,11 @@ const UsersLinks: React.FunctionComponent<UsersLinksProps> = (props) => {
     ));
   };
   return (
-    <div className="users-links">
-      <Widget footerText="dsdsad" title="Mijn links" icon={cancelIcon}>
+    <Widget footerText="dsdsad" title="Mijn links" icon={cancelIcon}>
+      <div className="users-links">
         <ul className="user-links-container">{renderUsersLinks()}</ul>
-      </Widget>
-    </div>
+      </div>
+    </Widget>
   );
 };
 

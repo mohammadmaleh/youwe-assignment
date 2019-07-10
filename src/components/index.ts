@@ -8,6 +8,8 @@ export {default as News} from './News/News';
 export {default as UsersLinks} from './UsersLinks/UsersLinks';
 export {default as MicroBlog} from './MicroBlog/MicroBlog';
 export {default as TelephoneBook} from './TelephoneBook/TelephoneBook';
+export {default as DirectLinks} from './DirectLinks/DirectLinks';
+export {default as Sidebar} from './Sidebar/Sidebar';
 export {
   default as ActivityIndicator
 } from './ActivityIndicator/ActivityIndicator';

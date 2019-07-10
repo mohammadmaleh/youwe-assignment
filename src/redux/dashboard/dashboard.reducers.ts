@@ -1,6 +1,8 @@
 import { DashboardActionTypes, DashboardState, UPDATE_DASHBOARD } from '../../types/dashboard.types';
 
 const initialState: DashboardState = {
+  openFirstAccordion: false,
+  clickingAccordionEffectOthers: true,
   events: null,
   blogs: [],
   news: [],
@@ -8,7 +10,8 @@ const initialState: DashboardState = {
   polls: [],
   userLinks: [],
   userGroups: [],
-  microBlog: []
+  microBlog: [],
+  DirectLinks: []
 };
 
 export function dashboardReducer(

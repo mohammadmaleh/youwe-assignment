@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import {Accordions, Events, Header, MicroBlog, News, TelephoneBook, UsersGroups, UsersLinks  } from '../../components';
+import { Accordions, Events, Header, MicroBlog, News, TelephoneBook, UsersGroups, UsersLinks } from '../../components';
 import { AppState } from '../../redux';
 import { thunkFetchDashboardData } from '../../redux/dashboard/dashboard.thunks';
 import { DashboardState } from '../../types/dashboard.types';
@@ -24,13 +24,18 @@ class App extends React.Component<AppProps> {
       userLinks,
       userGroups,
       microBlog,
+      openFirstAccordion,
+      clickingAccordionEffectOthers
     } = this.props.dashboardData;
 
     return (
       <div className="dashboard">
         <Header />
         <div className="wrapper">
-          <Accordions />
+          <Accordions
+            openFirstAccordion={openFirstAccordion}
+            clickingAccordionEffectOthers={clickingAccordionEffectOthers}
+          />
           <Events events={events} />
           <TelephoneBook />
           <News news={news} />

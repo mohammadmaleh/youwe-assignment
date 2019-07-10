@@ -1,16 +1,29 @@
 @import '../../../common/styles/variables.scss';
+
 .widget {
-  border: 1px solid $SECONDARY_COLOR;
+  border-top: 1px solid $SECONDARY_COLOR;
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0;
+  vertical-align: top; /* Keep the item on the very top */
 
   .widget-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 50px;
+    overflow: scroll;
 
     .widget-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       width: calc(100% - 100px);
       padding: 14px 17px;
+      img {
+        transition: all 0.35s ease-in-out;
+      }
       p {
         text-transform: uppercase;
         font-size: 1.8rem;
@@ -23,7 +36,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 46px;
+    height: 50px;
     background: $THIRD_COLOR;
     .footer-text {
       padding: 16px 14px;
@@ -38,15 +51,21 @@
     }
   }
   .widget-body {
-    max-height: 0;
-    padding: 0 1em;
     background: white;
-    transition: all 0.35s;
-    display: flex;
-    flex-direction: column;
+    animation: closeWidget 0.5s;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    & > * {
+      animation: hideContent 0.2s;
+
+      visibility: hidden;
+      opacity: 0;
+    }
+
     .widget-item {
-      width: calc(100% - 34px);
-      padding: 17px 10px;
+      width: 100%;
+      padding: 10px 10px;
       border-bottom: 1px solid $LIGHT_GREY_COLOR;
       > * {
         font-size: 14px;
@@ -57,20 +76,32 @@
         border-bottom: none;
       }
     }
-
-    & > div {
-      display: none;
-    }
   }
   &.active {
+    border: 1px solid $SECONDARY_COLOR;
+
     .widget-body {
+      animation: openWidget 1s;
+
       display: flex;
-      max-height: 500px;
-      padding: 17px;
+      //padding: 17px;
+      // transition-delay: 0s;
+      padding: 28px 10px;
+
+      & > * {
+        animation: showContent 1s;
+        visibility: visible;
+        opacity: 1;
+      }
+      max-height: 1000px;
 
       cursor: pointer;
-      & > div {
-        display: flex;
+    }
+    .widget-header {
+      .widget-title {
+        img {
+          transform: rotate(90deg);
+        }
       }
     }
   }

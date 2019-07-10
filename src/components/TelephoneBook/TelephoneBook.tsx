@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import cancelIcon from '../../assets/images/cancel.svg';
+import searchIcon from '../../assets/images/search-icon.svg';
 
 interface TelephoneBookProps {}
 
@@ -14,7 +14,7 @@ const TelephoneBook: React.FunctionComponent<TelephoneBookProps> = (props) => {
       <div className="input-container">
         <input type="text" />
 
-        <img src={cancelIcon} alt="" className="icon" />
+        <img src={searchIcon} alt="" className="icon" />
       </div>
     </div>
   );

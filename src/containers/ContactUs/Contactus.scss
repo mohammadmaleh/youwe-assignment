@@ -1,0 +1,94 @@
+@import '../../common/styles/variables.scss';
+.contact-us {
+  .container {
+    height: calc(100vh - 246px);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    .contact-us-form-container {
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      display: flex;
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: flex-start;
+      h1 {
+        margin-bottom: 20px;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        margin-top: 20px;
+        .form-field {
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          label {
+            color: $PURPLE_COLOR;
+            width: 70px;
+            font-size: 1.4rem;
+            padding-top: 5px;
+          }
+          .input-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            input,
+            textarea {
+              padding-left: 10px;
+              width: 250px;
+              height: 30px;
+              border-radius: 25px;
+              border: 1px solid $LIGHT_GREY_COLOR;
+              transition: all 0.35s ease-in-out;
+            }
+            textarea {
+              width: 100%;
+              resize: none;
+              height: 100px;
+              padding: 10px;
+            }
+          }
+          .error {
+            padding: 5px;
+            color: transparent;
+          }
+          &.has-error {
+            .input-container {
+              input,
+              textarea {
+                border: 1px solid $RED_COLOR;
+              }
+            }
+            .error {
+              color: $RED_COLOR;
+            }
+          }
+        }
+        .submit-button-container {
+          width: 100%;
+          padding: 10px;
+          display: flex;
+          justify-content: flex-end;
+          .submit-button {
+            height: 25px;
+            width: 120px;
+            border-radius: 25px;
+            background-color: $GREEN_COLOR;
+            color: $WHITE_COLOR;
+            cursor: pointer;
+            &[disabled] {
+              background-color: $LIGHT_GREY_COLOR;
+            }
+          }
+        }
+      }
+    }
+  }
+}

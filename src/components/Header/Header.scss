@@ -1,4 +1,5 @@
 @import '../../common/styles/variables.scss';
+@import "../../common/styles/animation";
 .header {
   display: flex;
   flex-direction: column;
@@ -6,7 +7,7 @@
   justify-content: flex-end;
   > * {
     padding: 0 90px;
-    width: calc(100% - 180px);
+    width: 100%
   }
   .menu-container {
     background-color: $WHITE_COLOR;
@@ -29,7 +30,6 @@
 
       .menu-item {
         margin: 0 17px;
-        font-family: Helvetica;
         font-size: 1.4rem;
         color: $FOOTER_TEXT_COLOR;
       }
@@ -48,7 +48,6 @@
     .title-container {
       margin-right: 32px;
       .title {
-        font-family: Helvetica;
         font-size: 24px;
         color: #000000;
       }
@@ -80,8 +79,9 @@
           margin-right: 0;
         }
         a {
-          font-size: 16px;
+          font-size: 1.6rem;
           color: #ffffff;
+          cursor: pointer;
         }
       }
     }
@@ -89,15 +89,71 @@
       display: flex;
       flex-direction: row;
       .search-input {
-        width: calc(100% -50px);
         width: 380px;
-        height: 46px;
+        height: 50px;
         background-color: $WHITE_COLOR;
-        font-family: Helvetica;
         font-size: 16px;
         color: $FOOTER_TEXT_COLOR;
         padding-left: 5px;
       }
     }
+  }
+  @media only screen and (min-width: $BREAK_POINT_MID_SCREENS) and (max-width: $BREAK_POINT_BIG_SCREENS) {
+
+
+    .navigation{
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 130px;
+
+      .navigation-container {
+      margin-bottom: 10px}
+      }
+    }
+  @media only screen and (max-width: $BREAK_POINT_MID_SCREENS) {
+    > * {
+      padding: 0 30px;
+
+    }
+    .menu-container {
+
+
+      .clickable-icon {
+        margin: 0px 6px;
+        width: 25px;
+        height: 25px;
+        img{
+          width: 15px;
+          height: 15px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .menu {
+
+        .menu-item {
+          margin: 0 5px;
+
+        }
+      }
+    }
+    .navigation{
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 130px;
+      .search-container {
+        .search-input {
+          width: 307px;
+
+        }
+      }
+      .navigation-container {
+        margin-bottom: 10px}
+  }
+
+
   }
 }

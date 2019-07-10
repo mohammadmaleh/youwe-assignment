@@ -1,6 +1,7 @@
 .accordions {
+  display: inline-block;
   width: 100%;
-  min-width: 380px;
-  max-height: 382px;
-  overflow-y: scroll;
+  margin: 10px 0;
+  vertical-align: top; /* Keep the item on the very top */
+  transition: all .5s ease-in-out;
 }

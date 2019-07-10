@@ -23,11 +23,11 @@ const UsersGroups: React.FunctionComponent<UsersGroupsProps> = (props) => {
     ));
   };
   return (
-    <div className="users-groups">
-      <Widget footerText="dsdsad" title="Mijn links" icon={cancelIcon}>
+    <Widget footerText="dsdsad" title="Mijn links" icon={cancelIcon}>
+      <div className="users-groups">
         <ul className="user-groups-container">{renderUsersLinks()}</ul>
-      </Widget>
-    </div>
+      </div>
+    </Widget>
   );
 };
 

@@ -1,7 +1,12 @@
 import * as React from 'react';
-import cancelIcon from '../../assets/images/cancel.svg';
+import { Link } from 'react-router-dom';
+
+import { ClickableIcon } from '..';
 import Logo from '../../assets/images/CuraNu-logo.png';
-import {ClickableIcon} from '../index';
+import notificationIcon from '../../assets/images/notification.svg';
+import searchIcon from '../../assets/images/search-icon.svg';
+import settingsIcon from '../../assets/images/settings.svg';
+
 interface IHeaderProps {}
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
@@ -9,28 +14,31 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
     <div className="header">
       <div className="menu-container">
         <div className="menu">
+          <Link to="/contact-us" className="menu-item">
+            Groepen Contact
+          </Link>
+
           <a href="/" className="menu-item">
             FAQ
           </a>
           <a href="/" className="menu-item">
-            FAQ
+            Smoelenboek
           </a>
           <a href="/" className="menu-item">
-            FAQ
+            Microblog
           </a>
           <a href="/" className="menu-item">
-            FAQ
-          </a>
-          <a href="/" className="menu-item">
-            FAQ
+            Over ons
           </a>
         </div>
-        <ClickableIcon icon={cancelIcon} />
-        <ClickableIcon icon={cancelIcon} />
+        <ClickableIcon icon={settingsIcon} />
+        <ClickableIcon icon={notificationIcon} />
       </div>
 
       <div className="logo-container">
-        <img src={Logo} alt="" />
+        <Link to="/">
+          <img src={Logo} alt="" />
+        </Link>
         <div className="title-container">
           <h1 className="title">CuraNu</h1>
           <p className="secondry-title">Zorg en welzij</p>
@@ -40,30 +48,21 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
       <div className="navigation">
         <ul className="navigation-container">
           <li className="navigation-item">
-            <a href="/">FAQ</a>
+            <a href="/">Artikelen</a>
           </li>
           <li className="navigation-item">
-            <a href="/">FAQ</a>
+            <a href="/">Nieuws</a>
           </li>
           <li className="navigation-item">
-            <a href="/">FAQ</a>
+            <a href="/">Evenementen</a>
           </li>
           <li className="navigation-item">
-            <a href="/">FAQ</a>
-          </li>
-          <li className="navigation-item">
-            <a href="/">FAQ</a>
-          </li>
-          <li className="navigation-item">
-            <a href="/">FAQ</a>
-          </li>
-          <li className="navigation-item">
-            <a href="/">FAQ</a>
+            <a href="/">Kwaliteitshandboek</a>
           </li>
         </ul>
         <div className="search-container">
           <input type="text" className="search-input" />
-          <ClickableIcon icon={cancelIcon} handleClick={() => {}} />
+          <ClickableIcon icon={searchIcon} handleClick={() => {}} />
         </div>
       </div>
     </div>

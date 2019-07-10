@@ -8,6 +8,8 @@
   overflow: scroll;
   max-height: 175px;
   margin-bottom: 5px;
+  border: 1px solid $SECONDARY_COLOR;
+
   .accordion-header {
     cursor: pointer;
     width: 100%;
@@ -31,7 +33,7 @@
   }
   .accordion-body {
     max-height: 0;
-    padding: 0 1em;
+    padding: 0 17px;
     background: white;
     transition: all 0.35s ease-in-out;
 
@@ -43,7 +45,7 @@
     .accordion-header {
       background-color: $LIGHT_GREY_COLOR;
       .clickable-icon.clickable img {
-        transform: rotate(20deg);
+        transform: rotate(90deg);
         transition: all 0.35s ease-in-out;
       }
     }
@@ -54,6 +56,14 @@
       cursor: pointer;
       > * {
         display: flex;
+      }
+    }
+    .clickable-icon{
+      img{
+        transition: all 0.35s ease-in-out;
+
+        transform: rotate(90deg);
+
       }
     }
   }

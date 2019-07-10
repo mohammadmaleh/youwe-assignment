@@ -1,0 +1,120 @@
+@import "./variables";
+@keyframes openWidget
+{
+  from {
+    max-height: 0;
+
+
+  }
+  to {
+    max-height: 1000px;
+
+  }
+}
+
+
+@keyframes closeWidget
+{
+  from {
+    max-height: 1000px;
+
+
+  }
+  to {
+    max-height: 0;
+
+  }
+}
+
+
+
+
+
+@keyframes showContent
+{
+  from {
+
+    visibility: hidden;
+    opacity: 0;
+
+
+  }
+  to {
+    visibility: visible;
+
+    opacity: 1;
+
+  }
+}
+@keyframes hideContent
+{
+  0% {
+    visibility: visible;
+
+    opacity: 1;
+
+  }
+  100% {
+    visibility: hidden;
+
+    opacity: 0;
+
+  }
+}
+
+@keyframes openIcon
+{
+  from {
+
+  transform: rotate(0deg);
+
+
+  }
+  to {
+    transform: rotate(90deg);
+
+  }
+}
+@keyframes openIcon
+{
+  from {
+
+  transform: rotate(90deg);
+
+
+  }
+  to {
+    transform: rotate(0deg);
+
+  }
+}
+@keyframes openAccordionColor
+{
+  from {
+
+    background-color: $INACTIVE_COLOR;
+
+
+  }
+  to {
+    background-color: $LIGHT_GREY_COLOR;
+
+
+  }
+}
+@keyframes closeAccordionColor
+{
+  from {
+
+    background-color: $INACTIVE_COLOR;
+
+
+
+  }
+  to {
+    background-color: $LIGHT_GREY_COLOR;
+
+
+
+  }
+}
