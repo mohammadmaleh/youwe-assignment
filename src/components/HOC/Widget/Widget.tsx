@@ -1,12 +1,11 @@
 import './Widget.scss';
 
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-import {ClickableIcon} from '../..';
-import eventsIcon from '../../../assets/images/calendar.png';
-import cancelIcon from '../../../assets/images/cancel.svg';
-import openIcon from '../../../assets/images/open.png';
+import { ClickableIcon } from '../..';
 import arrowIcon from '../../../assets/images/arrow-right.svg';
+import eventsIcon from '../../../assets/images/calendar.svg';
+import cancelIcon from '../../../assets/images/cancel.svg';
 
 var classNames = require('classnames');
 
@@ -44,7 +43,7 @@ export default function Widget(props: WidgetProps) {
         <div className="footer-text">
           <p>{footerText}</p>
         </div>
-        <ClickableIcon icon={openIcon} />
+        <ClickableIcon icon={arrowIcon} />
       </div>
     </div>
   );

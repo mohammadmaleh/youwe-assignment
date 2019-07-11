@@ -4,6 +4,10 @@ export interface SystemState {
   session: string;
   userName: string;
 }
+export interface userLinkType {
+  link: number;
+  id: string;
+}
 
 export interface EventType {
   id: string;
@@ -40,6 +44,7 @@ export interface QualityManualType {
 }
 export interface UserGroupType {
   groupImage: any;
+  id: string;
   name: string;
 }
 export interface MicroBlogType {
@@ -47,7 +52,9 @@ export interface MicroBlogType {
   authorName: string;
   numberOfResponses: number;
   blogContent: string;
+  blogDate: string;
   blogImage: any;
+  id: string;
 }
 
 export interface DashboardState {
@@ -58,7 +65,7 @@ export interface DashboardState {
   news: NewSType[];
   qualityManual: QualityManualType[];
   polls: any[];
-  userLinks: string[];
+  userLinks: userLinkType[];
   userGroups: UserGroupType[];
   microBlog: MicroBlogType[];
   DirectLinks: DirectLinksType[];

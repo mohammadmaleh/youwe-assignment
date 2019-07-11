@@ -16,12 +16,12 @@ const MicroBlog: React.FunctionComponent<MicroBlogProps> = (props) => {
   const renderBlogs = () => {
     if (!microBlog) return false;
     return microBlog.map((blog: MicroBlogType) => (
-      <div className="widget-item user-blog-item">
+      <div className="widget-item user-blog-item" key={blog.id}>
         <div className="blog-header">
           <img src={blog.authorImage} alt="" className="author-image" />
           <div className="author-info">
             <p className="author-name">{blog.authorName}</p>
-            <p className="date">{blog.authorName}</p>
+            <p className="date">{blog.blogDate}</p>
           </div>
           <div className="likes-container"></div>
         </div>
@@ -34,7 +34,7 @@ const MicroBlog: React.FunctionComponent<MicroBlogProps> = (props) => {
     ));
   };
   return (
-    <Widget footerText="dsdsad" title="micro blog" icon={cancelIcon}>
+    <Widget footerText="Toon meer" title="micro blog" icon={cancelIcon}>
       <div className="micro-blog">
         <div className="create-post">
           <textarea name="" id="" />

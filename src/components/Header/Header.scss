@@ -1,5 +1,5 @@
 @import '../../common/styles/variables.scss';
-@import "../../common/styles/animation";
+@import '../../common/styles/animation';
 .header {
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   justify-content: flex-end;
   > * {
     padding: 0 90px;
-    width: 100%
+    width: 100%;
   }
   .menu-container {
     background-color: $WHITE_COLOR;
@@ -32,6 +32,9 @@
         margin: 0 17px;
         font-size: 1.4rem;
         color: $FOOTER_TEXT_COLOR;
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -51,7 +54,7 @@
         font-size: 24px;
         color: #000000;
       }
-      .secondry-title {
+      .secondary-title {
         font-size: 15px;
         color: #000000;
       }
@@ -86,10 +89,11 @@
       }
     }
     .search-container {
+      width: 430px;
       display: flex;
       flex-direction: row;
       .search-input {
-        width: 380px;
+        width: calc(100% - 50px);
         height: 50px;
         background-color: $WHITE_COLOR;
         font-size: 16px;
@@ -99,31 +103,27 @@
     }
   }
   @media only screen and (min-width: $BREAK_POINT_MID_SCREENS) and (max-width: $BREAK_POINT_BIG_SCREENS) {
-
-
-    .navigation{
+    .navigation {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       height: 130px;
 
       .navigation-container {
-      margin-bottom: 10px}
+        margin-bottom: 10px;
       }
     }
+  }
   @media only screen and (max-width: $BREAK_POINT_MID_SCREENS) {
     > * {
-      padding: 0 30px;
-
+      padding: 0 15px;
     }
     .menu-container {
-
-
       .clickable-icon {
-        margin: 0px 6px;
+        margin: 0px 4px;
         width: 25px;
         height: 25px;
-        img{
+        img {
           width: 15px;
           height: 15px;
         }
@@ -132,28 +132,27 @@
         }
       }
       .menu {
-
         .menu-item {
           margin: 0 5px;
-
         }
       }
     }
-    .navigation{
+    .navigation {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       height: 130px;
-      .search-container {
-        .search-input {
-          width: 307px;
+      .navigation-container {
+        width: 100%;
+        margin-bottom: 10px;
 
+        .navigation-item {
+          margin-right: 15px;
         }
       }
-      .navigation-container {
-        margin-bottom: 10px}
-  }
-
-
+      .search-container {
+        width: 100%;
+      }
+    }
   }
 }

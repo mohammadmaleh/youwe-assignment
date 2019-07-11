@@ -32,16 +32,24 @@ class App extends React.Component<AppProps> {
       <div className="dashboard">
         <Header />
         <div className="wrapper">
-          <Accordions
-            openFirstAccordion={openFirstAccordion}
-            clickingAccordionEffectOthers={clickingAccordionEffectOthers}
-          />
-          <Events events={events} />
-          <TelephoneBook />
-          <News news={news} />
-          <UsersLinks userLinks={userLinks} />
-          <MicroBlog microBlog={microBlog} />
-          <UsersGroups userGroups={userGroups} />
+          <div>
+            <Accordions
+              openFirstAccordion={openFirstAccordion}
+              clickingAccordionEffectOthers={clickingAccordionEffectOthers}
+            />
+            <Events events={events} />
+            <News news={news} />
+          </div>
+          <div>
+            <UsersLinks userLinks={userLinks} />
+            <UsersGroups userGroups={userGroups} />
+          </div>
+          <div>
+            <TelephoneBook />
+
+            <MicroBlog microBlog={microBlog} />
+          </div>
+
           {/*<DirectLinks directLinks={DirectLinks} />*/}
         </div>
       </div>
@@ -50,7 +58,7 @@ class App extends React.Component<AppProps> {
 }
 
 const mapStateToProps = (state: AppState) => ({
-  dashboardData: state.dahsboard
+  dashboardData: state.dashboard
 });
 
 export default connect(

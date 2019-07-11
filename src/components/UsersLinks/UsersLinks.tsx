@@ -2,9 +2,10 @@ import * as React from 'react';
 
 import { ActivityIndicator, Widget } from '../';
 import cancelIcon from '../../assets/images/cancel.svg';
+import { userLinkType } from '../../types/dashboard.types';
 
 interface UsersLinksProps {
-  userLinks: string[] | null;
+  userLinks: userLinkType[] | null;
 }
 
 const UsersLinks: React.FunctionComponent<UsersLinksProps> = (props) => {
@@ -14,8 +15,8 @@ const UsersLinks: React.FunctionComponent<UsersLinksProps> = (props) => {
   const renderUsersLinks = () => {
     if (!userLinks) return false;
     return userLinks.map((link) => (
-      <div className="user-link-item widget-item">
-        <p className="user-link">{link}</p>
+      <div key={link.id} className="user-link-item widget-item">
+        <p className="user-link">{link.link}</p>
       </div>
     ));
   };

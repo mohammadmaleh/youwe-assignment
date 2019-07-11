@@ -53,17 +53,17 @@
       display: flex;
       max-height: 500px;
       padding: 17px;
+      margin-bottom: 20px;
       cursor: pointer;
       > * {
         display: flex;
       }
     }
-    .clickable-icon{
-      img{
+    .clickable-icon {
+      img {
         transition: all 0.35s ease-in-out;
 
         transform: rotate(90deg);
-
       }
     }
   }

@@ -7,7 +7,7 @@ import thunkMiddleware from 'redux-thunk';
 import { dashboardReducer } from './dashboard/dashboard.reducers';
 
 const rootReducer = combineReducers({
-  dahsboard: dashboardReducer,
+  dashboard: dashboardReducer,
   form: formReducer
 });
 

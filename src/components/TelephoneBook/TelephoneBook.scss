@@ -1,13 +1,13 @@
 @import '../../common/styles/variables.scss';
 .telephone-book {
   height: 176px;
-  background: url('assets/images/telephonebook-bg.png');
+  background: url('assets/images/telephonebook-bg.svg');
   background-size: cover;
   background-position: bottom;
   display: inline-block;
   width: 100%;
   margin: 10px 0;
-  padding: 10px 0 10px 10px;
+  padding: 10px;
 
   .title {
     font-size: 18px;
@@ -21,7 +21,7 @@
     margin-bottom: 30px;
   }
   .input-container {
-    width: 317px;
+    width: calc(100% - 50px);
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -36,12 +36,17 @@
       height: 100%;
       border: none;
     }
-    img{
+    img {
       height: 25px;
       width: 25px;
     }
     .icon {
       width: 50px;
+    }
+  }
+  @media only screen and (max-width: $BREAK_POINT_MID_SCREENS) {
+    .input-container {
+      width: 100%;
     }
   }
 }

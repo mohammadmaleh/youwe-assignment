@@ -22,7 +22,12 @@ const Events: React.FunctionComponent<EventsProps> = (props) => {
     ));
   };
   return (
-    <Widget icon={cancelIcon} title="Evenementen" active footerText="dsdsadsa">
+    <Widget
+      icon={cancelIcon}
+      title="Evenementen"
+      active
+      footerText="Meer evenementen"
+    >
       {props.events && props.events.length > 0 && (
         <ul className="events">{renderEvents()}</ul>
       )}

@@ -1,6 +1,8 @@
-import * as React from 'react';
 import classnames from 'classnames';
-import logo from '../../assets/images/CuraNu-logo.png';
+import * as React from 'react';
+
+import logo from '../../assets/images/CuraNu-logo.svg';
+
 interface ActivityIndicatorProps {
   size: string;
 }

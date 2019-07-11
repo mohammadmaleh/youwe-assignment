@@ -25,7 +25,7 @@ const News: React.FunctionComponent<NewsProps> = (props) => {
     ));
   };
   return (
-    <Widget title="Nieuws" icon={cancelIcon} footerText={'sdsdads'}>
+    <Widget title="Nieuws" icon={cancelIcon} footerText={'Meer nieuws'}>
       <div className="news">
         <ul className="news-holder">{renderNews()}</ul>
       </div>

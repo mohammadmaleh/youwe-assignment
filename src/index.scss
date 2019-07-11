@@ -1,11 +1,7 @@
 @import './components/index.scss';
 @import './containers/index.scss';
 
-
-
-
-
-html{
+html {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
 
@@ -25,18 +21,17 @@ body {
   padding: 0;
   text-decoration: unset;
   box-sizing: border-box;
-
 }
 
 @media only screen and (min-width: $BREAK_POINT_MID_SCREENS) and (max-width: $BREAK_POINT_BIG_SCREENS) {
   html {
     font-family: 'Open Sans', sans-serif;
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 @media only screen and (max-width: $BREAK_POINT_MID_SCREENS) {
   html {
     font-family: 'Open Sans', sans-serif;
-    font-size: 8px;
+    font-size: 7px;
   }
 }

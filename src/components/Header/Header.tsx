@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ClickableIcon } from '..';
-import Logo from '../../assets/images/CuraNu-logo.png';
+import Logo from '../../assets/images/CuraNu-logo.svg';
 import notificationIcon from '../../assets/images/notification.svg';
 import searchIcon from '../../assets/images/search-icon.svg';
 import settingsIcon from '../../assets/images/settings.svg';
@@ -41,7 +41,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
         </Link>
         <div className="title-container">
           <h1 className="title">CuraNu</h1>
-          <p className="secondry-title">Zorg en welzij</p>
+          <p className="secondary-title">Zorg en welzij</p>
         </div>
         <h2 className="motto">Intranet</h2>
       </div>

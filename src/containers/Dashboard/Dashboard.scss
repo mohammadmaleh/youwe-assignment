@@ -1,16 +1,10 @@
 @import '../../common/styles/variables';
 .dashboard {
   .wrapper {
-    //  transition: all .5s ease-in-out;
-    //  row-gap: 20px;
-    //  column-count: 3;
-    //  @media only screen and (min-width: $BREAK_POINT_MID_SCREENS) and (max-width: $BREAK_POINT_BIG_SCREENS) {
-    //    column-count: 2;
-    //  }
     padding: 0 90px;
 
     @media only screen and (max-width: $BREAK_POINT_MID_SCREENS) {
-      padding: 0 30px;
+      padding: 10px 15px;
       display: block;
     }
     //  display: flex;
