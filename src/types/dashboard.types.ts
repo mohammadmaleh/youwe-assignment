@@ -1,9 +1,3 @@
-// Describing the shape of the system's slice of state
-export interface SystemState {
-  loggedIn: boolean;
-  session: string;
-  userName: string;
-}
 export interface userLinkType {
   link: number;
   id: string;
